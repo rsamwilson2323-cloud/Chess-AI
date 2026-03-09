@@ -1,110 +1,118 @@
 ♟️ Gesture Controlled Chess AI
-
-Gesture Controlled Chess AI is a computer vision–based chess game that allows players to control the chessboard using hand gestures instead of a mouse or keyboard. The system tracks hand movements using a webcam and converts them into cursor actions, creating an interactive and futuristic chess playing experience.
-
-The project combines Computer Vision, Artificial Intelligence, and Game Development technologies. Using real-time hand tracking, players can move a virtual cursor with their index finger and perform a pinch gesture to select or move chess pieces. After the player makes a move, the AI automatically calculates its response and plays against the user.
-
-This project demonstrates how AI and vision-based interaction systems can be integrated into traditional games to create new ways of human-computer interaction.
-
+A gesture-controlled Chess AI system that allows players to play chess using hand gestures detected through a webcam.
+The project combines Computer Vision, Artificial Intelligence, and Game Logic to create an interactive chess experience. Hand gestures are detected using MediaPipe, processed with OpenCV, and the chess game is managed using python-chess and Pygame.
+Additionally, the project integrates the Groq API to provide AI-powered chess insights and move analysis.
 🚀 Features
-
-🖐 Hand gesture chess control
-
-🎥 Real-time hand tracking using MediaPipe
-
-♟ Interactive chess board interface
-
-🤖 AI opponent for automatic moves
-
-🔴 Pinch gesture to select and move pieces
-
-🏁 Checkmate detection
-
-🔄 Game reset option
-
-📷 Live camera preview during gameplay
-
-🧠 How It Works
-
-The webcam captures the player's hand movements.
-
-MediaPipe Hands detects hand landmarks.
-
-The index finger tip controls the cursor on the chess board.
-
-A pinch gesture (thumb + index finger) acts as a click action.
-
-When the player makes a move, the AI calculates the best response and plays automatically.
-
-🛠 Technologies Used
-
+♟️ Play chess against an AI opponent
+🖐️ Control chess pieces using hand gestures
+📷 Real-time webcam-based gesture detection
+🧠 AI-powered chess analysis using Groq API
+🎮 Interactive chess board using Pygame
+⚡ Fast and responsive gameplay
+🧠 Technologies Used
 Python
+OpenCV – Computer vision processing
+MediaPipe – Hand tracking and gesture detection
+Pygame – Chess board interface
+python-chess – Chess game logic
+Groq API – AI-powered move analysis
 
-OpenCV
-
-MediaPipe
-
-Pygame
-
-Python-Chess
-
-Groq API (LLaMA AI)
-
-📦 Installation
-1️⃣ Clone the repository
-git clone https://github.com/rsamwilson2323-cloud/Chess-AI.git
-cd Chess-AI
-2️⃣ Install dependencies
-pip install -r requirements.txt
-▶️ Run the Project
-python "chess AI.py"
-
-The application will start in fullscreen mode and activate the webcam for gesture detection.
-
-🎮 Controls
-Action	Gesture / Key
-Move Cursor	Index Finger
-Select Piece	Pinch Gesture
-Move Piece	Pinch Again
-Reset Game	SPACE
-Exit Game	ENTER
 📂 Project Structure
+
 Chess-AI
 │
-├── chess AI.py
-├── requirements.txt
-├── README.md
-└── LICENSE
-🔮 Future Improvements
+├── chess AI.py          # Main application
+├── requirements.txt     # Required libraries
+├── README.md            # Project documentation
+└── LICENSE              # License file
 
-Possible upgrades for this project:
+⚙️ Installation
+1. Clone the Repository
+Bash
 
-Stronger chess engine (Stockfish)
+git clone https://github.com/rsamwilson2323-cloud/Chess-AI.git
 
-Improved gesture detection
+cd Chess-AI
+2. Install Required Libraries
+Bash
 
-Drag-and-drop piece movement
+pip install -r requirements.txt
 
-AI difficulty levels
+🔑 Groq API Setup
+This project uses the Groq API for AI-powered chess insights
 
-Multiplayer support
+Step 1 – Create a Groq Account
+Go to the Groq Console:
+https://console.groq.com/�
+Sign up or log in.
 
-UI enhancements
+Step 2 – Generate an API Key
+Open API Keys
+Click Create API Key
+Copy the generated key
+
+Example:
+gsk_xxxxxxxxxxxxxxxxxxxxxxxxx
+
+Step 3 – Add the API Key to the Code
+Open the file:
+
+chess AI.py
+Find this section:
+Python
+
+from groq import Groq
+
+client = Groq(api_key="YOUR_API_KEY_HERE")
+Replace it with your actual API key:
+Python
+
+from groq import Groq
+
+client = Groq(api_key="gsk_your_actual_api_key_here")
+
+▶️ Running the Project
+Run the program using:
+Bash
+
+python "chess AI.py"
+The webcam will start and the gesture recognition system will begin detecting hand movements.
+
+🖐️ Gesture Controls
+Gesture
+Action
+Hand detection
+Activates gesture tracking
+Finger movement
+Select chess pieces
+Gesture confirmation
+Perform the move
+Gesture recognition may vary depending on lighting and camera quality.
+
+⚙️ How It Works
+The webcam captures hand gestures.
+MediaPipe detects and tracks hand landmarks.
+Gesture movements are converted into chess commands.
+The python-chess engine validates the moves.
+The AI assistant provides move analysis.
+Pygame displays the chess board and updates moves.
+
+💡 Future Improvements
+♟️ Stronger chess AI engine integration
+🎙️ Voice control support
+🌐 Online multiplayer mode
+🤖 Improved gesture recognition accuracy
+📊 AI-based move explanations
+
+📜 License
+This project is licensed under the MIT License.
 
 👨‍💻 Author
 
 Sam Wilson
 
-🌐 GitHub
+🔗 GitHub
 https://github.com/rsamwilson2323-cloud
 
-💼 LinkedIn
+🔗 LinkedIn
 https://www.linkedin.com/in/sam-wilson-14b554385
-
-⭐ Support
-
-If you like this project:
-
-⭐ Star the repository
-🍴 Fork the project
-🧠 Contribute improvements
